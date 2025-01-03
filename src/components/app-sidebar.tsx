@@ -1,9 +1,7 @@
-import * as React from "react";
 import {
   AudioWaveform,
   Command,
   ChevronRight,
-  GalleryVerticalEnd,
   CircleDot,
   Home,
   TerminalSquare,
@@ -35,7 +33,6 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-import { TeamSwitcher } from "@/components/team-switcher";
 import { ProjectSwitcher } from "@/components/project-switcher";
 import { NavUser } from "@/components/nav-user";
 import {

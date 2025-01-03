@@ -13,8 +13,6 @@ import {
   BreadcrumbItem,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
 } from "./components/ui/breadcrumb";
 import { NavActions } from "./components/nav-actions";
 import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";

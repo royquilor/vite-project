@@ -14,7 +14,6 @@ import {
   Link,
   MoreHorizontal,
   Settings2,
-  Star,
   Trash,
   Trash2,
 } from "lucide-react"
@@ -113,7 +112,7 @@ export function NavActions() {
       {/* <Button variant="ghost" size="icon" className="h-7 w-7">
         <Star />
       </Button> */}
-      <Popover onOpenChange={setIsOpen}>
+      <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>
           <Button
             variant="ghost"
