@@ -17,6 +17,7 @@ import {
   GraduationCap,
   Settings,
   Search,
+  ChevronUp,
 } from "lucide-react";
 
 import {
@@ -34,8 +35,16 @@ import {
 } from "@/components/ui/sidebar";
 
 import { ProjectSwitcher } from "@/components/project-switcher";
-import { NavUser } from "@/components/nav-user";
+// import { NavUser } from "@/components/nav-user";
 import { TeamSwitcher } from "@/components/team-switcher";
+// import { Separator } from "@/components/ui/separator";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   Collapsible,
   CollapsibleContent,
@@ -50,13 +59,13 @@ const items1 = [
   },
 ];
 
-const footerData = [
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-];
+// const footerData = [
+//   {
+//     title: "Settings",
+//     url: "#",
+//     icon: Settings,
+//   },
+// ];
 
 const projectsData = [
   {
@@ -357,7 +366,45 @@ export function AppSidebar() {
           </Collapsible>
         </SidebarContent>
         <SidebarFooter>
-          {/* <NavUser user={data.user} /> */}
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <SidebarMenuButton>
+                    <Settings /> Settings
+                    <ChevronUp className="ml-auto" />
+                  </SidebarMenuButton>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  side="top"
+                  className="w-[--radix-popper-anchor-width]"
+                >
+                  <DropdownMenuItem>
+                    <span>Organization</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <span>Project</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <span>Users</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <span>API Keys</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <span>Integrations</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <span>Sign out</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarFooter>
+        {/* <SidebarFooter>
+          <NavUser user={data.user} />
           <SidebarMenu>
             {footerData.map((item) => (
               <SidebarMenuItem key={item.title}>
@@ -370,7 +417,7 @@ export function AppSidebar() {
               </SidebarMenuItem>
             ))}
           </SidebarMenu>
-        </SidebarFooter>
+        </SidebarFooter> */}
       </Sidebar>
     </Sidebar>
   );
