@@ -35,6 +35,7 @@ import {
 
 import { ProjectSwitcher } from "@/components/project-switcher";
 import { NavUser } from "@/components/nav-user";
+import { TeamSwitcher } from "@/components/team-switcher";
 import {
   Collapsible,
   CollapsibleContent,
@@ -145,16 +146,19 @@ const data = {
     {
       name: "Acme Inc",
       logo: CircleDot,
+      initials: "AI",
       plan: "Enterprise",
     },
     {
       name: "Acme Corp.",
       logo: AudioWaveform,
+      initials: "AC",
       plan: "Startup",
     },
     {
       name: "Evil Corp.",
       logo: Command,
+      initials: "EC",
       plan: "Free",
     },
   ],
@@ -191,9 +195,10 @@ export function AppSidebar() {
     <Sidebar>
       <Sidebar>
         <SidebarHeader>
-          <NavUser user={data.user} />
+          {/* <NavUser user={data.user} /> */}
+          <TeamSwitcher teams={data.teams} />
           <ProjectSwitcher teams={projectsSwitcherData.teams} />
-          {/* <TeamSwitcher teams={data.teams} /> */}
+          
           {/* <TeamSwitcher projects={data.projects} /> */}
         </SidebarHeader>
         <SidebarContent>
