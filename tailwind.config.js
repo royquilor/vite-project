@@ -3,6 +3,22 @@ module.exports = {
     darkMode: ["class"],
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
+	fontSize: {
+		xs: '0.75rem',
+		sm: '0.875rem',
+		base: '1rem',
+		lg: '1.125rem',
+		xl: '1.25rem',
+	},
+	colors: {
+		primary: '#000000',
+		secondary: '#000000',
+		accent: '#000000',
+		muted: '#000000',
+		destructive: '#000000',
+		background: '#000000',
+		foreground: '#000000',
+	},
   	extend: {
   		borderRadius: {
   			lg: 'var(--radius)',

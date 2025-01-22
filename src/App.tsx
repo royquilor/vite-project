@@ -74,6 +74,10 @@ function App() {
                   <SparklesIcon className="w-4 h-4" />
                   Generate
                 </Button>
+                <Button variant="default" size="sm">
+                  <SparklesIcon className="w-4 h-4" />
+                  Generate
+                </Button>
               </div>
             </div>
             <div className="mx-auto h-full w-full">
