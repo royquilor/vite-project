@@ -31,7 +31,7 @@ function App() {
           <Alert variant="banner">
             <AlertTitle>Staging —</AlertTitle>
             <AlertDescription>
-              Changes you make here don’t affect your live environment
+              Changes you make here don’t affect your live environment!
             </AlertDescription>
           </Alert>
           <header className="flex h-14 shrink-0 items-center gap-2 border-b">
